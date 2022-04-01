@@ -3,16 +3,20 @@
 I started this project to learn about neural networks
 
 Because some of the libraries are named different because of newer python versions you can install the right library with the following commands:
+```
 pip install python-mnist
 pip install numpy
 pip install opencv-python
 pip install pickle-mixin
 pip install copy
+```
 
 If any of the libraries do not work try one of the following commands to remove another version of the library that doesnt work:
+```
 pip uninstall mnist
 pip uninstall cv2
 pip uninstall pickle
+```
 
 To use the neural network for the first time, scroll done in the code and make sure training is on (by giving the boolean as value True). Than if the model has been trained you can turn this boolean to False.
 In the Test-plaatjes folder are a few examples I drew and which name you can insert in the image_f string. 

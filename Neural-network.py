@@ -1015,8 +1015,8 @@ class Model:
 
     # Create a new NN by simply inserting the dataset of images and an dataset name
     @staticmethod
-    def create_NN(data_name='data_set', parms_load=False, model_load=False):
-        X, y, X_test, y_test = create_data_mnist()
+    def create_NN(data_name='data_set', parms_load=False, model_load=False, folder_path=None):
+        X, y, X_test, y_test = create_data_mnist(folder_path)
         # Shuffle the training dataset
         keys = np.array(range(X.shape[0]))
         np.random.shuffle(keys)
@@ -1103,7 +1103,7 @@ class Model:
 
 
 # MNIST dataset (train + test)
-def create_data_mnist(path="C:/Users/lukae/Documents/Code/Neural-network-GITHUB_REPO/input/MNIST/"):
+def create_data_mnist(path):
 
     home = path
     mnist = MNIST(home)
@@ -1137,12 +1137,13 @@ mnist_labels = {
 # set parameters load and model load to false to train a new set of parameters and make a model
 # adjust one of the two to either load a model or a set of parameters
 # use this function for debugging and creating a new model
+MNIST_path = "C:/Users/lukae/Documents/Code/Neural-network-GITHUB_REPO/input/MNIST/"
 trained = True
 if trained is False:
-    Model.create_NN('digit_mnist', parms_load=False, model_load=False)
+    Model.create_NN('digit_mnist', parms_load=False, model_load=False, folder_path=MNIST_path)
 
 '''Testing images with the model'''
-image_f = 'Test-plaatjes/Tekening.png'
+image_f = 'Test-plaatjes/Drie.png'
 model_f = 'digit_mnist.model'
 label_l = mnist_labels
 Model.testing(image_f, model_f, label_l)

@@ -1208,7 +1208,7 @@ mnist_labels = {
 # set parameters load and model load to false to train a new set of parameters and make a model
 # adjust one of the two to either load a model or a set of parameters
 # use this function for debugging and creating a new model
-trained = True
+trained = False
 if trained is False:
     Model.create_NN('digit_mnist', parms_load=False, model_load=False)
 

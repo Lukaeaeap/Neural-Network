@@ -1,13 +1,15 @@
 from mnist import MNIST
-from os.path import expanduser
 import numpy as np
-import nnfs
-import os
 import cv2
 import pickle
 import copy
 
-nnfs.init()
+# Use:
+# pip install python-mnist
+# pip install numpy
+# pip install opencv-python
+# pip install pickle-mixin
+# pip install copy
 
 # Dense layer
 

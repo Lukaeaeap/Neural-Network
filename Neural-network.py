@@ -1143,7 +1143,7 @@ if trained is False:
     Model.create_NN('digit_mnist', parms_load=False, model_load=False, folder_path=MNIST_path)
 
 '''Testing images with the model'''
-image_f = 'Test-plaatjes/Drie.png'
+image_f = 'Test-plaatjes/Test-One.png'
 model_f = 'digit_mnist.model'
 label_l = mnist_labels
 Model.testing(image_f, model_f, label_l)
